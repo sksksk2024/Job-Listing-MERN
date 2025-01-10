@@ -165,6 +165,7 @@ const JobForm = ({ onSubmit, editingJob, formMode }) => {
               accept="image/*"
               onChange={handleLogoChange}
               className="file-input w-full"
+              aria-label="Upload Image"
             />
             {error && <p className="text-red-500">{error}</p>}
             {logo && (
@@ -181,7 +182,7 @@ const JobForm = ({ onSubmit, editingJob, formMode }) => {
                   checked={isNew}
                   onChange={(e) => setIsNew(e.target.checked)}
                 />
-                <p>New</p>
+                <span>New</span>
               </label>
               <label className="flex gap-2">
                 <input
@@ -189,7 +190,7 @@ const JobForm = ({ onSubmit, editingJob, formMode }) => {
                   checked={isFeatured}
                   onChange={(e) => setIsFeatured(e.target.checked)}
                 />
-                <p>Featured</p>
+                <span>Featured</span>
               </label>
             </div>
             <button
