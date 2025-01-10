@@ -1,0 +1,114 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Default */
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+img {
+  /* max-width: 100%; */
+  user-select: none;
+}
+
+/* Variables */
+
+:root {
+  /* Font Size */
+  --font-size-2xs: 0.5rem;
+  --font-size-xs: 0.75rem; /* Tailwind default */
+  --font-size-sm: 0.875rem; /* Tailwind default */
+  --font-size-md: 1rem;
+  --font-size-md-1: 1.1rem;
+  --font-size-lg: 1.25rem;
+  --font-size-xl: 1.5rem;
+  --font-size-2xl: 2rem;
+  --font-size-2-2xl: 2.2rem;
+  --font-size-2-4xl: 2.4rem;
+  --font-size-3xl: 3rem;
+  --font-size-4xl: 4rem;
+  --font-size-4-5xl: 4.5rem;
+
+  /* Colors */
+  --desaturated-dark-cyan: hsl(180, 29%, 50%);
+  --light-grayish-cyan: hsl(180, 52%, 96%);
+  --light-grayish-cyan-filter-tables: hsl(180, 31%, 95%);
+  --dark-grayish-cyan: hsl(180, 8%, 52%);
+  --very-dark-grayish-cyan: hsl(180, 14%, 20%);
+}
+/* Styles */
+html,
+body {
+  min-height: 100dvh;
+  width: 100dvw;
+  overflow-x: clip;
+  overflow-y: scroll;
+}
+
+header {
+  background: url('./images/bg-header-mobile.svg') center center/cover no-repeat;
+}
+
+@media (min-width: 48em) {
+  header {
+    background: url('./images/bg-header-desktop.svg') center center/cover
+      no-repeat;
+  }
+}
+
+/* Loader */
+.container {
+  height: 5vh;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  width: 1.25rem;
+  height: 1.25rem;
+  position: relative;
+  animation: spin 2s linear infinite;
+}
+
+.loader::before,
+.loader::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0.625rem;
+  width: 0.625rem;
+  height: 0.625rem;
+  border-radius: 50%;
+  background: #3498db;
+  animation: bounce 2s infinite ease-in-out;
+}
+
+.loader::after {
+  left: -0.625rem;
+  background: #e74c3c;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes bounce {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-1.25rem);
+  }
+}
