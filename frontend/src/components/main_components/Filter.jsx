@@ -1,7 +1,7 @@
 import removeIcon from './../../images/icon-remove.svg';
 
 const Filter = ({ filters, removeFilter, clearFilters }) => {
-  console.log('Current Filters:', filters);
+  // console.log('Current Filters:', filters);
 
   return (
     <section className="relative -top-32I flex justify-between items-center gap-4 px-32P py-16P bg-white w-[90dvw] max-w-container-1500 mb-64M rounded-5BR">

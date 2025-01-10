@@ -59,7 +59,7 @@ const Main = () => {
     setFilters((prevFilters) =>
       prevFilters.filter((f) => f !== filter.toLowerCase())
     );
-    console.log('New Filters:', filter);
+    // console.log('New Filters:', filter);
   };
 
   const clearFilters = () => {
@@ -68,12 +68,17 @@ const Main = () => {
 
   // Filtering Jobs
   const filteredJobs = jobs.filter((job) => {
-    const jobFilters = [...job.role, job.level, ...job.languages, ...job.tools]
-      .filter((f) => typeof f === 'string') // Ensure only strings
-      .map((f) => f.toLowerCase().trim()); // Convert to lowercase and trim
+    const jobFilters = [
+      ...job.role,
+      job.level,
+      ...(job.languages || []),
+      ...(job.tools || []),
+    ]
+      .filter((f) => typeof f === 'string' && f.trim()) // Ensure valid strings
+      .map((f) => f.toLowerCase().trim());
 
-    console.log('Filters:', filters);
-    console.log('Job Filters:', jobFilters);
+    // console.log('Filters:', filters);
+    // console.log('Job Filters:', jobFilters);
 
     return filters.every((filter) => jobFilters.includes(filter.trim()));
   });

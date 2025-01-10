@@ -31,9 +31,9 @@ const jobSchema = new mongoose.Schema(
       required: false,
     },
     postedAt: {
-      type: String,
+      type: Date,
       required: true,
-      default: () => new Date().toISOString(), // Default to current date
+      default: () => new Date(), // Default to the current date
     },
     contract: {
       type: String,

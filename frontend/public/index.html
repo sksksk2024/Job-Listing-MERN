@@ -1,38 +1,50 @@
 <!DOCTYPE html>
-<html lang="en" class="font-league-spartan bg-very-pale-blue max-w-[100vw]">
+<html
+  lang="en"
+  class="font-league-spartan bg-very-pale-blue max-w-[100vw] no-js"
+>
   <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="shortcut icon" href="./favicon-32x32.png" type="image/x-icon" />
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=DM+Serif+Display:ital@0;1&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Inconsolata:wght@200..900&family=Karla:ital,wght@0,200..800;1,200..800&family=League+Spartan:wght@100..900&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Favicon -->
-    <link
-      rel="icon"
-      href="%PUBLIC_URL%/favicon-32x32.png"
-      type="image/x-icon"
-    />
-
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-
-    <title>Job Listing</title>
+    <title>Job Listing MERN</title>
+    <style>
+      .noscript {
+        display: block;
+        opacity: 1;
+      }
+      html.js-enabled .noscript {
+        display: none;
+        opacity: 0;
+      }
+    </style>
+    <script>
+      document.documentElement.className =
+        document.documentElement.className.replace(/\bno-js\b/, '') +
+        ' js-enabled';
+    </script>
   </head>
   <body class="z-10 select-none bg-light-grayish-cyan relative">
-    <noscript class="bg-red-500 text-white p-4 rounded-md text-center"
-      >You need to enable JavaScript to run this app.</noscript
+    <div
+      class="noscript"
+      style="
+        color: black;
+        font-weight: bold;
+        font-size: 3rem;
+        text-align: center;
+        padding: 1rem;
+        background-color: red;
+        position: absolute;
+        top: 15%;
+        left: 11%;
+        max-width: 37rem;
+        border: 10px solid black;
+        border-radius: 1rem;
+      "
     >
-    <div class="" id="root"></div>
+      You need to enable JavaScript to run this app!
+    </div>
+    <div id="root"></div>
   </body>
 </html>
