@@ -10,4 +10,4 @@ deploying a full-stack app is now second nature to me, thanks to the hands-on ex
 (took me just 20 minutes, instead of 1-2 days, to nail it 💥). Feel free to check it out
 — it's the most complex project I've done so far, and I’m super proud of how it turned out.🔥
 
-![Design preview for the Job listings with filtering coding challenge](./design/desktop-preview.jpg)
+![Design preview for the Job listings with filtering coding challenge](./frontend/design/desktop-preview.jpg)
